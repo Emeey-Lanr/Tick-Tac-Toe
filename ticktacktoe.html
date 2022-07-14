@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+
+        <div class="row w-25 mx-auto align-items">
+            <div class="col-lg-4 xx">
+                X
+            </div>
+            <div class="col-lg-4 board"><span class="xscore px-2">0</span><span class="arrow"></span><span
+                    class="oscore px-2">0</span> </div>
+            <div class="col-lg-4 oo">O</div>
+
+        </div>
+
+
+        <div class="body">
+            <div class="d-flex">
+                <div onclick="rrr(event)" id="b1" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b2" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b3" class="d-flex justify-content-center align-items-center"></div>
+            </div>
+            <div class="d-flex">
+                <div onclick="rrr(event)" id="b4" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b5" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b6" class="d-flex justify-content-center align-items-center"></div>
+            </div>
+            <div class="d-flex">
+                <div onclick="rrr(event)" id="b7" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b8" class="d-flex justify-content-center align-items-center"></div>
+                <div onclick="rrr(event)" id="b9" class="d-flex justify-content-center align-items-center"></div>
+            </div>
+        </div>
+        <p id="t"></p>
+    </div>
+
+
+
+
+
+    <script>
+        let x = 'X';
+        let oscore = 0;
+        let xscore = 0
+        let xscorecount = document.querySelector('.xscore')
+        let oscorecount = document.querySelector('.oscore')
+        let emptyDiv = (empty) => {
+            b1.innerHTML = empty;
+            b2.innerHTML = empty;
+            b3.innerHTML = empty;
+            b4.innerHTML = empty;
+            b5.innerHTML = empty;
+            b6.innerHTML = empty;
+            b7.innerHTML = empty;
+            b8.innerHTML = empty;
+            b9.innerHTML = empty
+        }
+        const rrr = (e) => {
+            if (x == 'X' && e.target.innerText == "") {
+                e.target.innerText = `${x}`
+                x = 'O';
+                e.target.style.color = '#a52a72';
+                if (b1.innerHTML == "X" && b2.innerHTML == "X" && b3.innerHTML == "X") {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b4.innerHTML == "X" && b5.innerHTML == "X" && b6.innerHTML == "X") {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+
+                } else if (b7.innerHTML == "X" && b8.innerHTML == "X" && b9.innerHTML == "X") {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b1.innerHTML == "X" && b5.innerHTML == "X" && b9.innerHTML == "X") {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b3.innerHTML == 'X' && b5.innerHTML == 'X' && b7.innerHTML == 'X') {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                }
+                else if (b1.innerHTML == "X" && b4.innerHTML == "X" && b7.innerHTML == "X") {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b3.innerHTML == 'X' && b6.innerHTML == 'X' && b9.innerHTML == 'X') {
+                    xscore++
+                    xscorecount.textContent = xscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                }
+
+            } else if (e.target.innerText == '') {
+                e.target.style.color = '#00ccff';
+                e.target.innerText = `${x}`
+                x = 'X';
+                if (b1.innerHTML == "O" && b2.innerHTML == "O" && b3.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b4.innerHTML == "O" && b5.innerHTML == "O" && b6.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+
+                } else if (b7.innerHTML == "O" && b8.innerHTML == "O" && b9.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b1.innerHTML == "O" && b5.innerHTML == "O" && b9.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b3.innerHTML == 'O' && b5.innerHTML == 'O' && b7.innerHTML == 'O') {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b2.innerHTML == "O" && b5.innerHTML == "O" && b8.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                }
+                else if (b1.innerHTML == "O" && b4.innerHTML == "O" && b7.innerHTML == "O") {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                } else if (b3.innerHTML == 'O' && b6.innerHTML == 'O' && b9.innerHTML == 'O') {
+                    oscore++
+                    oscorecount.textContent = oscore;
+                    setTimeout(() => {
+                        emptyDiv("")
+                    }, 200)
+                }
+
+
+
+            }
+
+            if (oscore == 5) {
+                t.innerHTML = 'O WON'
+                setTimeout(() => {
+                    emptyDiv("")
+                }, 300)
+            } else if (xscore == 5) {
+                t.innerHTML = 'X WON'
+                setTimeout(() => {
+                    emptyDiv("")
+                }, 300)
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: tte;
+    src: url(SMARC___.TTF);
+}
+
+.background {
+    width: 100%;
+    padding: 200px 0;
+    background-position: center;
+    background-size: cover;
+    background-image: url(hui-jing-masketeer-scene-6.jpg);
+}
+
+.row {
+    position: relative;
+    top: -100px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    background-color: black;
+
+}
+
+.board {
+    background: linear-gradient(45deg, #00ccff, #a52a72);
+}
+
+.xx {
+    font-family: tte;
+    color: #a52a72;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.oo {
+    font-weight: bold;
+    color: #00ccff;
+    font-family: tte;
+    font-size: 3rem;
+}
+
+.xscore {
+    font-family: tte;
+    color: #a52a72;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.oscore {
+    font-weight: bold;
+    color: #00ccff;
+    font-family: tte;
+    font-size: 3rem;
+}
+
+.body {
+    width: 30%;
+    margin: 0 auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.863), #000000bb);
+    box-shadow: -2px -10px 5px #000000;
+    border-radius: 2px;
+    /* border: 1px solid black; */
+
+}
+
+.body .d-flex>div {
+    width: 33.3%;
+    border: 1px solid black;
+    height: 20vh;
+    font-size: 3rem;
+    font-family: tte;
+    border-radius: 30px;
+    color: #a52a72;
+    font-weight: bold;
+    box-shadow: -2px -2px 0px 10px #000000;
+}
+
+#b1 {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
