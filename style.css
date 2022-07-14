@@ -15,6 +15,7 @@
     background-position: center;
     background-size: cover;
     background-image: url(hui-jing-masketeer-scene-6.jpg);
+    /* height: 100vh; */
 }
 
 .row {
@@ -84,4 +85,82 @@
     border-top: none;
     border-bottom: none;
     border-left: none;
+}
+
+.xaxis1 {
+    width: 410px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #a52a72;
+    position: relative;
+    top: -390px;
+}
+
+.xaxis2 {
+    width: 410px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #a52a72;
+    position: relative;
+    top: -244px;
+}
+
+.xaxis3 {
+    width: 410px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #a52a72;
+    position: relative;
+    top: -104px;
+    border-radius: 10px 0;
+}
+
+.yaxis1 {
+    width: 10px;
+    height: 400px;
+    background-color: #a52a72;
+    position: relative;
+    top: -460px;
+    margin: auto;
+    left: -157px;
+}
+
+
+.yaxis2 {
+    width: 10px;
+    height: 400px;
+    background-color: #a52a72;
+    position: relative;
+    top: -860px;
+    margin: auto;
+}
+
+.yaxis3 {
+    width: 10px;
+    height: 400px;
+    background-color: #a52a72;
+    position: relative;
+    top: -1260px;
+    margin: auto;
+    right: -157px;
+}
+
+.zaxis1 {
+    width: 10px;
+    height: 520px;
+    background-color: #a52a72;
+    transform: rotate(47deg);
+    position: relative;
+    top: -1730px;
+    left: 790px;
+}
+
+.zaxis2 {
+    width: 10px;
+    height: 520px;
+    background-color: #a52a72;
+    transform: rotate(133deg);
+    position: relative;
+    top: -2250px;
+    left: 780px;
 }
