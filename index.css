@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: tat;
+    src: url(SMARC___.TTF);
+}
+
+.body {
+    background-color: #3238df;
+    width: 100%;
+    /* padding-bottom: 300px; */
+    padding-bottom: 140px;
+
+
+}
+
+.house {
+    width: 100%;
+    height: 80vh;
+    /* position: relative; */
+
+}
+
+.boxhouse {
+    width: 100px;
+    animation: boxhouse 7 4s running normal;
+
+
+}
+
+
+@keyframes boxhouse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.boxhouse .d-flex>div {
+    width: 33%;
+    height: 38px;
+    border: 2px solid white;
+}
+
+/* .zaxis {
+    width: 5px;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    margin-left: 45px;
+    transform: rotate(45deg);
+} */
+
+#b1 {
+    border-left: none;
+    border-top: none;
+
+}
+
+#b2 {
+    border-top: none;
+}
+
+#b3 {
+    border-top: none;
+    border-right: none;
+}
+
+#b4 {
+    border-left: none;
+}
+
+#b6 {
+    border-right: none;
+}
+
+#b7 {
+    border-left: none;
+    border-bottom: none;
+
+}
+
+#b8 {
+    border-bottom: none;
+}
+
+#b9 {
+    border-bottom: none;
+    border-right: none;
+}
+
+.btnplay {
+    position: relative;
+    top: -30px;
+
+}
+
+
+
+.btnplay button {
+    border: none;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: 600;
+    animation: btn infinite 1s running normal;
+}
+
+@keyframes btn {
+    0% {
+        padding: 8px 8px;
+    }
+
+    50% {
+        padding: 10px 10px;
+    }
+
+    100% {
+        padding: 8px 8px;
+    }
+}
+
+.btnplayNone {
+    display: none;
+}
+
+p {
+    color: white;
+    font-size: 2rem;
+    font-family: tat;
+    animation: tp 1 6s running normal;
+}
+
+.textNone {
+
+    display: none;
+
+}
+
+@keyframes tp {
+    0% {
+        font-size: 1rem;
+    }
+
+    50% {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media screen and (max-width:) {}
