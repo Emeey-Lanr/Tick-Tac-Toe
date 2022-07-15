@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2" align="center" height="300px" width="300px">
+        <tr>
+            <td onclick="p(event)" id="b0"></td>
+            <td onclick="p(event)" id="b1"></td>
+            <td onclick="p(event)" id="b2"></td>
+        </tr>
+        <tr>
+            <td onclick="p(event)" id="b3"></td>
+            <td onclick="p(event)" id="b4"></td>
+            <td onclick="p(event)" id="b5"></td>
+        </tr>
+        <tr>
+            <td onclick="p(event)" id="b6"></td>
+            <td onclick="p(event)" id="b7"></td>
+            <td onclick="p(event)" id="b8"></td>
+        </tr>
+
+        <script>
+
+            let p = (e) => {
+                console.log(e.path)
+                let m = 'X'
+                let x = Math.floor(Math.random() * 9);
+                let mx = x;
+                console.log(mx)
+
+                console.log(x)
+                let box = document.querySelector(`#b${x + 1}`);
+
+
+                if (m == 'X' && e.target.innerHTML == '') {
+                    e.target.innerHTML = `${m}`
+                    setTimeout(() => {
+                        if (e.path[0].innerHTML == 'X') {
+                            let m = 'O';
+                            box.textContent = `${m}`
+                        }
+                    }, 500)
+
+                }
+            }
+
+            let m = {
+                make: 'Rice',
+                blue: 'Green',
+                bluemake: function (m) {
+                    this.new = 2022 - m;
+                    return this.new
+                }
+
+
+            }
+            localStorage.mm = JSON.stringify(m)
+
+
+        </script>
+
+    </table>
+</body>
+
+</html>
