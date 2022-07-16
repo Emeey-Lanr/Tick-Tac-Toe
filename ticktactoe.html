@@ -6,34 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-color: #3238df;
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="ticktactoe.css">
 </head>
 
 <body>
-    <div class="body d-flex justify-content-center align-items-center">
-        <div>
-            <div class="d-flex">
-                <div class="text-light">o</div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="d-flex">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="d-flex">
-                <div></div>
-                <div></div>
-                <div></div>
+    <div class="body">
+        <div class="scoreb d-flex justify-content-center w-100">
+            <div class="scoreboard">
+                <span id="X">X</span>
+                <span id="scoreboardX">0</span>
+                <span id="scoreboardO">0</span>
+                <span id="O">O</span>
             </div>
         </div>
+        <div class="house d-flex justify-content-center align-items-center w-100">
+            <div class="boxhouse">
+                <div class="d-flex">
+                    <div onclick="box(event)" id="b1"></div>
+                    <div onclick="box(event)" id="b2"></div>
+                    <div onclick="box(event)" id="b3"></div>
+                </div>
+                <div class="d-flex">
+                    <div onclick="box(event)" id="b4"></div>
+                    <div onclick="box(event)" id="b5"></div>
+                    <div onclick="box(event)" id="b6"></div>
+                </div>
+                <div class="d-flex">
+                    <div onclick="box(event)" id="b7"></div>
+                    <div onclick="box(event)" id="b8"></div>
+                    <div onclick="box(event)" id="b9"></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center w-100">
+            <button onclick="exit()" class="exit me-5">Exit</button>
+            <button onclick="restart()" class="restart me-5">Restart</button>
+        </div>
     </div>
-
+    <div class="winnerboard winnerboardNone">
+        <div>
+            <p class="tex" id="tex"></p>
+        </div>
+    </div>
+    <audio src="mad_growth2_prod_by_Emeeylbad.mp3" id="i"></audio>
+    <script src="ticktactoe.js"></script>
 </body>
 
 </html>

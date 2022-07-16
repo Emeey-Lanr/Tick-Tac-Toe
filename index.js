@@ -13,5 +13,6 @@ setTimeout(() => {
 }, 4000)
 btn.addEventListener('click', () => {
     playmusic.play();
+    location.href = 'ticktactoe.html'
 })
 
