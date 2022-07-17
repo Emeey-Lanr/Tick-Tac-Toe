@@ -1,5 +1,11 @@
 'use strict';
+// window.onload = function () {
+//     document.getElementById('i').play()
 
+// }
+let playsong = () => {
+    i.play()
+}
 let ttt = 'X'
 let score = 0
 let scoreo = 0;
@@ -149,6 +155,7 @@ const checktiexo = () => {
 
 
 const box = (e) => {
+    console.log(e)
 
     if (ttt == 'X' && e.target.innerHTML == '') {
         e.target.innerHTML = `${ttt}`;
@@ -325,5 +332,6 @@ const restart = () => {
     scoreo = 0;
     scoreboardX.innerHTML = score;
     scoreboardO.innerHTML = scoreo;
+    i.play()
 }
 
