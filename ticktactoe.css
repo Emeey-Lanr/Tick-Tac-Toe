@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
 
 body {
     position: relative;
@@ -151,14 +153,14 @@ span {
     padding: 5px 40px;
     border: none;
     border-radius: 20px;
+    margin: 0 5px;
 }
 
 .restart {
     border: none;
     padding: 5px 20px;
     border-radius: 20px;
-
-
+    margin: 0 40px;
 }
 
 .winnerboardNone {
@@ -168,6 +170,7 @@ span {
 @media screen and (max-width:450px) {
     .d-flex {
         width: 80%;
+        margin: auto;
     }
 
     .boxhouse .d-flex>div {
@@ -182,8 +185,13 @@ span {
         align-items: center;
     }
 
+    .winnerboard {
+        height: 111.7vh;
+    }
+
     .scoreboard {
         width: 60%;
+
 
     }
 
@@ -191,4 +199,24 @@ span {
         font-size: 1.2rem;
     }
 
+    .exit {
+        padding: 5px 30px;
+        margin: 0 5px;
+    }
+
+    .restart {
+        border: none;
+        margin: 0 10px;
+    }
+
+
+
+}
+
+@media screen and (max-width:240px) {
+    .boxhouse .d-flex>div {
+        width: 60px;
+        height: unset;
+        height: 10vh;
+    }
 }

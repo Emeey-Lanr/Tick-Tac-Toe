@@ -1,11 +1,5 @@
 'use strict';
-// window.onload = function () {
-//     document.getElementById('i').play()
 
-// }
-let playsong = () => {
-    i.play()
-}
 let ttt = 'X'
 let score = 0
 let scoreo = 0;
@@ -23,6 +17,17 @@ const emptyBox = () => {
     b9.innerHTML = '';
 }
 
+const peformActionForTie = () => {
+    tiesound.play()
+    winnerBoard.classList.remove('winnerboardNone');
+    tex.innerHTML = `IT'S A TIE`
+    setTimeout(() => {
+        winnerBoard.classList.add('winnerboardNone')
+        emptyBox();
+        tiesound.pause()
+    }, 5000);
+}
+
 const checktiexo = () => {
 
     let box1 = b1.innerHTML;
@@ -37,202 +42,108 @@ const checktiexo = () => {
     console.log(box1, box2, box3)
 
     if (box1 == 'O' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'X' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
-
-
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
-
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'O' && box5 == 'X' && box6 == 'X' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
-
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'X' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'O' && box6 == 'X' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'X' && box5 == 'O' && box6 == 'O' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'O' && box4 == 'O' && box5 == 'X' && box6 == 'X' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'X' && box6 == 'O' && box7 == 'O' && box8 == 'O' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'X' && box3 == 'X' && box4 == 'X' && box5 == 'O' && box6 == 'O' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'O' && box5 == 'X' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
-
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'x' && box5 == 'O' && box6 == 'X' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'X' && box6 == 'O' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'O' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'X') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
     } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'X' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'O') {
-        winnerBoard.classList.remove('winnerboardNone');
-        tex.innerHTML = `IT'S A TIE`
-        setTimeout(() => {
-            winnerBoard.classList.add('winnerboardNone')
-            emptyBox();
-        }, 5000);
+        peformActionForTie()
+    } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'X' && box9 == 'O') {
+        peformActionForTie()
+    } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'O') {
+        peformActionForTie()
+    } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'X' && box5 == 'X' && box6 == 'O' && box7 == 'O' && box8 == 'O' && box9 == 'X') {
+        peformActionForTie()
+    } else if (box1 == 'O' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'X' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
+        peformActionForTie()
+    } else if (box1 == 'O' && box2 == 'X' && box3 == 'X' && box4 == 'X' && box5 == 'O' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'X') {
+        peformActionForTie()
+    } else if (box1 == 'X' && box2 == 'O' && box3 == 'X' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'O' && box8 == 'X' && box9 == 'O') {
+        peformActionForTie()
+    } else if (box1 == 'O' && box2 == 'O' && box3 == 'X' && box4 == 'X' && box5 == 'O' && box6 == 'O' && box7 == 'O' && box8 == 'X' && box9 == 'X') {
+        peformActionForTie()
+    } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'X' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'O') {
+        peformActionForTie()
+    } else if (box1 == 'O' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'X' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
+        peformActionForTie()
+    } else if (box1 == 'X' && box2 == 'X' && box3 == 'O' && box4 == 'O' && box5 == 'O' && box6 == 'X' && box7 == 'X' && box8 == 'O' && box9 == 'X') {
+        peformActionForTie()
     }
-
-
 }
+//A function that is invoked in the button when X wins
 
+const whenXWins = function () {
+    winnerbell.play()
+    score++
+    scoreboardX.innerHTML = score;
+    winnerBoard.classList.remove('winnerboardNone');
+    tex.innerHTML = 'X WINS'
+    setTimeout(() => {
+        winnerBoard.classList.add('winnerboardNone')
+        emptyBox();
+        winnerBell.pause()
+    }, 5000);
+}
+//A function that is invoked in the button when x wins
 
-
-
+const whenOWins = () => {
+    winnerbell.play()
+    scoreo++
+    scoreboardO.innerHTML = scoreo;
+    winnerBoard.classList.remove('winnerboardNone');
+    tex.innerHTML = 'O WINS'
+    setTimeout(() => {
+        winnerBoard.classList.add('winnerboardNone')
+        emptyBox();
+        winnerbell.pause()
+    }, 5000);
+}
 const box = (e) => {
-    console.log(e)
+    //A CONDITIONAL STATEMENT THAT CHECKS IF THE CONDITION ARE MET BEFORE "whenOWins" or "whenXWins" FUNCTION ARE PERFORMED
 
     if (ttt == 'X' && e.target.innerHTML == '') {
         e.target.innerHTML = `${ttt}`;
         ttt = 'O'
         console.log(ttt)
         if (b1.innerHTML == 'X' && b2.innerHTML == 'X' && b3.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b4.innerHTML == 'X' && b5.innerHTML == 'X' && b6.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b7.innerHTML == 'X' && b8.innerHTML == 'X' && b9.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b1.innerHTML == 'X' && b4.innerHTML == 'X' && b7.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b2.innerHTML == 'X' && b5.innerHTML == 'X' && b8.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b3.innerHTML == 'X' && b6.innerHTML == 'X' && b9.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b1.innerHTML == 'X' && b5.innerHTML == 'X' && b9.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         } else if (b3.innerHTML == 'X' && b5.innerHTML == 'X' && b7.innerHTML == 'X') {
-            score++
-            scoreboardX.innerHTML = score;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'X WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenXWins()
         }
 
 
@@ -240,86 +151,25 @@ const box = (e) => {
         e.target.innerHTML = `${ttt}`
         ttt = 'X'
         if (b1.innerHTML == 'O' && b2.innerHTML == 'O' && b3.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b4.innerHTML == 'O' && b5.innerHTML == 'O' && b6.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b7.innerHTML == 'O' && b8.innerHTML == 'O' && b9.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b1.innerHTML == 'O' && b4.innerHTML == 'O' && b7.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b2.innerHTML == 'O' && b5.innerHTML == 'O' && b8.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b3.innerHTML == 'O' && b6.innerHTML == 'O' && b9.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b1.innerHTML == 'O' && b5.innerHTML == 'O' && b9.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-            }, 5000);
+            whenOWins()
         } else if (b3.innerHTML == 'O' && b5.innerHTML == 'O' && b7.innerHTML == 'O') {
-            scoreo++
-            scoreboardO.innerHTML = scoreo;
-            winnerBoard.classList.remove('winnerboardNone');
-            i.play()
-            tex.innerHTML = 'O WINS'
-            setTimeout(() => {
-                winnerBoard.classList.add('winnerboardNone')
-                emptyBox();
-                i.pause()
-            }, 5000);
+            whenOWins()
         }
-
 
     }
     checktiexo()
-
-    let o = true
 
 }
 
@@ -332,6 +182,5 @@ const restart = () => {
     scoreo = 0;
     scoreboardX.innerHTML = score;
     scoreboardO.innerHTML = scoreo;
-    i.play()
 }
 
